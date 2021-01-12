@@ -14,6 +14,14 @@ function App() {
         </a>{' '}
         &bull;{' '}
         <a
+          href="https://twitter.com/amiteshore"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          twitter
+        </a>{' '}
+        &bull;{' '}
+        <a
           href="mailto:amiteshore@gmail.com"
         >
           amiteshore@gmail.com
