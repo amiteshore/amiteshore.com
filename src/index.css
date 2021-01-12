@@ -1,0 +1,15 @@
+body {
+  color: #b0b3b8;
+  background-color: #1c1e21;
+}
+
+a {
+  color: #b0b3b8;
+  text-decoration: none;
+  box-shadow: 0 1px 0 0 #b0b3b8;
+}
+
+a:hover {
+  color: #3391ff;
+  box-shadow: 0 1px 0 0 #3391ff;
+}

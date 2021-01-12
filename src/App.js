@@ -1,13 +1,24 @@
 function App() {
   return (
    <div>
-      <h1>amit eshore</h1>
-      <p>
-         <a href="https://github.com/amiteshore">github</a>
-      </p>
-      <p>
-         <a href="mailto:amiteshore@gmail.com">amiteshore@gmail.com</a>
-      </p>
+      <header>
+         <h1>Amit Eshore</h1>
+      </header>
+      <footer>
+        <a
+          href="https://github.com/amiteshore"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          github
+        </a>{' '}
+        &bull;{' '}
+        <a
+          href="mailto:amiteshore@gmail.com"
+        >
+          amiteshore@gmail.com
+        </a>
+      </footer>
    </div>
   );
 }
