@@ -11,19 +11,21 @@ function App() {
           <a
             href="https://github.com/amiteshore"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             github
-          </a>{" "}
-          &bull;{" "}
+          </a>
+          {" "}&bull;{" "}
           <a
             href="https://twitter.com/amiteshore"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             twitter
-          </a>{" "}
-          &bull; <a href="mailto:amiteshore@gmail.com">amiteshore@gmail.com</a>
+          </a>
+          {" "}&bull;{" "}
+          <a 
+            href="mailto:amiteshore@gmail.com">
+            amiteshore@gmail.com
+          </a>
         </div>
       </footer>
     </>
