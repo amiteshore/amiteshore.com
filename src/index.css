@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
 body {
   margin: 0;
   color: #24292e;
@@ -31,4 +33,53 @@ a {
   h1 {
     margin: 32px 0;
   }
+}
+
+pre {
+  display: block;
+  font-family: "Fira Code", monospace;
+  padding: 12px 18px;
+  background-color: #002b36;
+  color: #fdf6e3;
+  /* border-radius: 3px; */
+}
+
+/* credit - https://stackoverflow.com/a/248013/10698968 */
+pre {
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+code {
+  display: inline-block;
+  font-family: "Fira Code", monospace;
+  padding: 2px 4px;
+  background: #93a1a1;
+  color: #002b36;
+  border-radius: 2px;
+}
+
+table,
+td,
+th {
+  border: 1px solid #cccccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 2px 8px;
+}
+
+hr {
+  border: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-top: 1px solid #cccccc;
 }

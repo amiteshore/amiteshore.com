@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Home() {
   return (
     <main>
@@ -7,6 +9,9 @@ function Home() {
       </p>
       <p>
         <a href="http://github.com/amiteshore/dotfiles">Dotfiles</a>
+      </p>
+      <p>
+        <Link to="/arch-linux">Arch Linux Installation</Link>
       </p>
     </main>
   );
