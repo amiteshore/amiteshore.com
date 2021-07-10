@@ -138,6 +138,7 @@ function ArchLinux() {
         Restart the machine by typing <code>reboot</code>.
       </p>
       <p>Remove the installation medium before login.</p>
+      <p>Btw, I use Arch.</p>
     </main>
   );
 }
