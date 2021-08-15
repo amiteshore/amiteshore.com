@@ -30,37 +30,56 @@ function ArchLinux() {
       <table>
         <thead>
           <tr>
-            <th>Mount point</th>
             <th>Partition</th>
+            <th>Mount point</th>
             <th>Partition type</th>
             <th>Size</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>/boot/efi</td>
-            <td>/dev/sda1</td>
+            <td>
+              <code>/dev/sda1</code>
+            </td>
+            <td>
+              <code>/boot/efi</code>
+            </td>
             <td>EFI System</td>
             <td>+512MB</td>
           </tr>
           <tr>
-            <td>/mnt</td>
-            <td>/dev/sda2</td>
+            <td>
+              <code>/dev/sda2</code>
+            </td>
+            <td>
+              <code>[SWAP]</code>
+            </td>
+            <td>Linux swap</td>
+            <td>+2048MB</td>
+          </tr>
+          <tr>
+            <td>
+              <code>/dev/sda3</code>
+            </td>
+            <td>
+              <code>/mnt</code>
+            </td>
             <td>Linux Filesystem</td>
-            <td>Reminder of the device</td>
+            <td>Remainder of the device</td>
           </tr>
         </tbody>
       </table>
-      <p>Note: Not adding swap.</p>
       <p>
         When done, enter <code>w</code> to write the changes to the disk and
         exit out of <code>fdisk</code>.
       </p>
       <h3>Format the partitions</h3>
-      <pre># mkfs.fat -F32 /dev/sda1</pre>
-      <pre># mkfs.ext4 /dev/sda2</pre>
-      <h3>Mount root partition</h3>
-      <pre># mount /dev/sda2 /mnt</pre>
+      <pre># mkfs.fat -F 32 /dev/sda1</pre>
+      <pre># mkswap /dev/sda2</pre>
+      <pre># mkfs.ext4 /dev/sda3</pre>
+      <h3>Mount root partitions</h3>
+      <pre># mount /dev/sda3 /mnt</pre>
+      <pre># swapon /dev/sda2</pre>
       {/*  */}
       <h2>Installation</h2>
       <hr />
@@ -74,8 +93,8 @@ function ArchLinux() {
       </pre>
       <h3>Install essential packages</h3>
       <pre>
-        pacstrap /mnt base linux linux-firmware vim networkmanager dhcpcd git
-        zsh sudo
+        pacstrap /mnt base linux-lts linux-headers-lts linux-firmware neovim
+        networkmanager dhcpcd git zsh sudo
       </pre>
       <h2>Configure the system</h2>
       <hr />

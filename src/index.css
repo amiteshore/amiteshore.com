@@ -56,10 +56,9 @@ pre {
 code {
   display: inline-block;
   font-family: "Fira Code", monospace;
-  padding: 2px 4px;
-  background: #93a1a1;
+  padding: 0 4px;
+  background: #eaeaea;
   color: #002b36;
-  border-radius: 2px;
 }
 
 table,
