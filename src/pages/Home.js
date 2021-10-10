@@ -13,6 +13,9 @@ function Home() {
       <p>
         <Link to="/arch-linux">Arch Linux Installation</Link>
       </p>
+      <p>
+        <Link to="/lamp-stack">Install LAMP Stack on Arch Linux</Link>
+      </p>
     </main>
   );
 }
