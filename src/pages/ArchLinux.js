@@ -8,6 +8,7 @@ function ArchLinux() {
       </Helmet>
       <main>
         <h1>Arch Linux Installation</h1>
+        <p class="date">June 21, 2021</p>
         <p>
           This guide is exactly the same as the{" "}
           <a href="https://wiki.archlinux.org/title/installation_guide">
