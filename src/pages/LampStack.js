@@ -15,7 +15,7 @@ function LampStack() {
         </p>
         <h2>Installation</h2>
         <hr />
-        <pre># sudo pacman -S apache mariadb php php-apache</pre>
+        <pre>$ sudo pacman -S apache mariadb php php-apache</pre>
         <h2>Configuration</h2>
         <hr />
         <h3>Apache</h3>
@@ -49,9 +49,9 @@ function LampStack() {
         </p>
         <p>Run:</p>
         <pre>
-          # mariadb-install-db --user=mysql --basedir=/usr
+          $ mariadb-install-db --user=mysql --basedir=/usr
           --datadir=/var/lib/mysql
-          <br /># mariadb-secure-installation
+          <br />$ mariadb-secure-installation
         </pre>
         <p>
           Then{" "}
@@ -77,10 +77,11 @@ function LampStack() {
         </pre>
         <h2>Optional</h2>
         <hr />
+        <h3>Use custom directory to develop my projects</h3>
         <p>
-          Change <code>DocumentRoot</code> in{" "}
-          <code>/etc/httpd/conf/httpd.conf</code> so that I can use any
-          directory to develop my project instead of the default{" "}
+          Change <code>DocumentRoot "/srv/http"</code> and{" "}
+          <code>&lt;Directory "/srv/http"&gt;</code> in apache config so that I
+          can use any directory to develop my project instead of the default{" "}
           <code>/srv/http</code> directory (below both lines should have the
           same path):
         </p>
@@ -90,13 +91,15 @@ function LampStack() {
           &lt;Directory "/home/amit/project"&gt;
         </pre>
         <p>
-          Change permissions so that Apache can access the directories/files:
+          Add <strong>execution permission to others</strong> for the{" "}
+          <code>DocumentRoot</code> directory and and its parent directories so
+          that apache can get there:
         </p>
         <pre>
-          # chmod o+x ~
+          $ chmod o+x ~
           <br />
-          # chmod o+x ~/project
-          <br /># chmod -R o+x ~/project
+          $ chmod o+x ~/project
+          <br />$ chmod -R o+x ~/project
         </pre>
         <p>
           Restart <code>httpd.service</code> to apply changes.
