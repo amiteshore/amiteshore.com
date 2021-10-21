@@ -81,22 +81,28 @@ function ArchLinux() {
           exit out of <code>fdisk</code>.
         </p>
         <h3>Format the partitions</h3>
-        <pre>$ mkfs.fat -F 32 /dev/sda1</pre>
-        <pre>$ mkswap /dev/sda2</pre>
-        <pre>$ mkfs.ext4 /dev/sda3</pre>
-        <h3>Mount root partitions</h3>
-        <pre>$ mount /dev/sda3 /mnt</pre>
-        <pre>$ swapon /dev/sda2</pre>
+        <pre>
+          $ mkfs.fat -F 32 /dev/sda1
+          <br />
+          $ mkswap /dev/sda2
+          <br />$ mkfs.ext4 /dev/sda3
+        </pre>
+        <h3>Mount root partition and enable swap</h3>
+        <pre>
+          $ mount /dev/sda3 /mnt
+          <br />$ swapon /dev/sda2
+        </pre>
         {/*  */}
         <h2>Installation</h2>
         <hr />
         <h3>Select the mirrors</h3>
-        <pre>$ pacman -Syy</pre>
         <p>Copy the default mirrorlist before updating:</p>
-        <pre>$ cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak</pre>
         <pre>
-          $ reflector -c "India" —download-timeout 60 -p http -p https —sort
-          rate —save /etc/pacman.d/mirriorlist
+          $ pacman -Syy
+          <br />
+          $ cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+          <br />$ reflector -c "India" —download-timeout 60 -p http -p https
+          —sort rate —save /etc/pacman.d/mirriorlist
         </pre>
         <h3>Install essential packages</h3>
         <pre>
@@ -141,8 +147,10 @@ function ArchLinux() {
         <p>Install required packages:</p>
         <pre>$ pacman -S grub efibootmgr intel-ucode</pre>
         <p>Create mount point and mount the EFI partition:</p>
-        <pre>$ mkdir /boot/efi</pre>
-        <pre>$ mount /dev/sda1 /boot/efi</pre>
+        <pre>
+          $ mkdir /boot/efi
+          <br />$ mount /dev/sda1 /boot/efi
+        </pre>
         <p>Install grub:</p>
         <pre>
           $ grub-install --target=x86_64-efi --efi-directory=/boot/efi
