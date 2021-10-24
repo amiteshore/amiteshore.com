@@ -106,7 +106,7 @@ function ArchLinux() {
         </pre>
         <h3>Install essential packages</h3>
         <pre>
-          pacstrap /mnt base linux-lts linux-headers-lts linux-firmware neovim
+          $ pacstrap /mnt base linux-lts linux-headers-lts linux-firmware neovim
           networkmanager dhcpcd git zsh sudo
         </pre>
         <h2>Configure the system</h2>
