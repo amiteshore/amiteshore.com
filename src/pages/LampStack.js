@@ -8,7 +8,7 @@ function LampStack() {
       </Helmet>
       <main>
         <h1>Install LAMP Stack on Arch Linux</h1>
-        <p class="date">October 10, 2021</p>
+        <p className="date">October 10, 2021</p>
         <p>
           <b>L</b>inux, <b>A</b>pache, <b>M</b>ariaDB/<b>M</b>ySQL and <b>P</b>
           HP

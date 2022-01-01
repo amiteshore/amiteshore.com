@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Home from "./pages/Home";
 import ArchLinux from "./pages/ArchLinux";
@@ -8,17 +8,11 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        <Switch>
-          <Route path="/lamp-stack">
-            <LampStack />
-          </Route>
-          <Route path="/arch-linux">
-            <ArchLinux />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/lamp-stack" element={<LampStack />} />
+          <Route path="/arch-linux" element={<ArchLinux />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
       </Router>
     </HelmetProvider>
   );
