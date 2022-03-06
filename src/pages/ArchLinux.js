@@ -101,8 +101,8 @@ function ArchLinux() {
           $ pacman -Syy
           <br />
           $ cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
-          <br />$ reflector -c "India" —download-timeout 60 -p http -p https
-          —sort rate —save /etc/pacman.d/mirriorlist
+          <br />$ reflector —download-timeout 60 --country India --protocol
+          https —sort rate —save /etc/pacman.d/mirriorlist
         </pre>
         <h3>Install essential packages</h3>
         <pre>
