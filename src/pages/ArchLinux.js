@@ -87,6 +87,7 @@ function ArchLinux() {
           $ mkswap /dev/sda2
           <br />$ mkfs.ext4 /dev/sda3
         </pre>
+        <p>We'll setup the EFI system partition later on.</p>
         <h3>Mount root partition and enable swap</h3>
         <pre>
           $ mount /dev/sda3 /mnt
@@ -105,9 +106,13 @@ function ArchLinux() {
           https —sort rate —save /etc/pacman.d/mirriorlist
         </pre>
         <h3>Install essential packages</h3>
+        <p>
+          <b>Tip</b>: Enable parallel downloading in{" "}
+          <code>/etc/pacman.conf</code> for faster installation of packages.
+        </p>
         <pre>
-          $ pacstrap /mnt base linux-lts linux-headers-lts linux-firmware neovim
-          networkmanager dhcpcd git zsh sudo
+          $ pacstrap /mnt base linux-lts linux-firmware base-devel neovim
+          networkmanager dhcpcd git zsh
         </pre>
         <h2>Configure the system</h2>
         <hr />
