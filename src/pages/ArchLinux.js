@@ -87,13 +87,12 @@ function ArchLinux() {
           $ mkswap /dev/sda2
           <br />$ mkfs.ext4 /dev/sda3
         </pre>
-        <p>We'll setup the EFI system partition later on.</p>
         <h3>Mount root partition and enable swap</h3>
         <pre>
           $ mount /dev/sda3 /mnt
           <br />$ swapon /dev/sda2
         </pre>
-        {/*  */}
+        <p>We'll setup the EFI system partition later on.</p>
         <h2>Installation</h2>
         <hr />
         <h3>Select the mirrors</h3>
@@ -107,8 +106,8 @@ function ArchLinux() {
         </pre>
         <h3>Install essential packages</h3>
         <p>
-          <b>Tip</b>: Enable parallel downloading in{" "}
-          <code>/etc/pacman.conf</code> for faster installation of packages.
+          Enable `ParallelDownloads` in <code>/etc/pacman.conf</code> for faster
+          installation of packages.
         </p>
         <pre>
           $ pacstrap /mnt base linux-lts linux-firmware base-devel neovim
