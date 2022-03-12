@@ -106,12 +106,12 @@ function ArchLinux() {
         </pre>
         <h3>Install essential packages</h3>
         <p>
-          Enable `ParallelDownloads` in <code>/etc/pacman.conf</code> for faster
-          installation of packages.
+          Enable <code>ParallelDownloads</code> under <code>[options]</code> in{" "}
+          <code>/etc/pacman.conf</code> for faster downloading of packages.
         </p>
         <pre>
           $ pacstrap /mnt base linux-lts linux-firmware base-devel neovim
-          networkmanager dhcpcd git zsh
+          networkmanager git zsh
         </pre>
         <h2>Configure the system</h2>
         <hr />
@@ -160,6 +160,11 @@ function ArchLinux() {
           $ grub-install --target=x86_64-efi --efi-directory=/boot/efi
           --bootloader-id=GRUB
         </pre>
+        <p>
+          <b>You may not need this:</b> Set{" "}
+          <code>GRUB_CMDLINE_LINUX_DEFAULT="pci=nomsi"</code> in{" "}
+          <code>/etc/default/grub</code>.
+        </p>
         <p>Generate grub configuration file:</p>
         <pre>$ grub-mkconfig -o /boot/grub/grub.cfg</pre>
         <h3>Network manager</h3>
