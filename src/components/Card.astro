@@ -1,0 +1,36 @@
+---
+const { user } = Astro.props;
+---
+
+<div class="card">
+  <div>
+    <div class="img-placeholder"></div>
+    <!-- <Image
+      src={user.avatar}
+      alt="my avatar"
+      width="100"
+      height="100"
+      inferSize
+    /> -->
+  </div>
+  <div>
+    <h1>{user.name}</h1>
+    <p>{user.bio}</p>
+    <div class="btn-group">
+      <button>Contact</button>
+      <div>
+        <a href={user.twitter} target="_blank">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href={user.github} target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const btn = document.querySelector("button");
+  btn.addEventListener("click", () => alert("amiteshore@gmail.com"));
+</script>

@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+// import avatar from "../images/avatar.jpg";
+
+const user = {
+  name: "Amit Eshore",
+  bio: "Software developer, traveller, fiction reader, fitness enthusiast and minimalist.",
+  // avatar: avatar,
+  github: "https://github.com/amiteshore",
+  twitter: "https://twitter.com/amiteshore",
+};
+---
+
+<Layout title="Amit Eshore">
+  <Card user={user} />
+</Layout>
